@@ -108,7 +108,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = brick_color;
+                ctx.fillStyle = eventColor[(M[c][r]%8)];
                 ctx.fill();
                 ctx.closePath();
 	 	ctx.font = "11px Arial";
