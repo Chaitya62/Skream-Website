@@ -23,6 +23,7 @@ var brick_color = "#AAA";
 var eventName = ["Football","BasketBall ","Volley Ball","Cricket","Badminton","Lawn Tennis","Carrom",
     "Atheletics","Throw Ball","Squash","Table Tennis","Informals","Box Cricket","Pickle Ball","Harambe"];
 var eventColor= ["#3498db","#9b59b6","#c0392b","#f1c40f","#bdc3c7","#2c3e50","#f1c40f","#2c3e50"];
+var textColor = "#FFF"
 var bricks = [];
 for(c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
@@ -67,7 +68,7 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN, CONGRATS!");
+                        console.log("YOU WIN, CONGRATS!");
                         document.location.reload();
                     }
                 }
@@ -111,8 +112,8 @@ function drawBricks() {
                 ctx.fillStyle = eventColor[(M[c][r]%8)];
                 ctx.fill();
                 ctx.closePath();
-	 	ctx.font = "11px Arial";
-    		ctx.fillStyle = '#000';
+	 	ctx.font = "900 10px Arial";
+    		ctx.fillStyle = textColor;
     		ctx.fillText(eventName[M[c][r]], brickX+(brickWidth/6), brickY+(brickHeight/1.5));
 
             }
@@ -152,7 +153,7 @@ function draw() {
         else {
             lives--;
             if(!lives) {
-                alert("GAME OVER");
+                console.log("GAME OVER");
                 document.location.reload();
             }
             else {
