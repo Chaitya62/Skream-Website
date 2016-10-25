@@ -1,5 +1,41 @@
+@font-face {
+    font-family: 'mosk';
+    src: url("../font/MB700.ttf");
+    src: url("../font/MUB900.ttf");
+}
+
 body {
-  background: white;
+  background-image: url("http://www.freedigitalphotos.net/images/img/homepage/87357.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+
+}
+html {
+  font-family: 'mosk'; !important;
+}
+.comingsoon{
+  position: relative;
+  float: center;
+  text-align: center;
+  color: white;
+}
+#myCanvas{
+  background-image: url("http://www.freedigitalphotos.net/images/img/homepage/87357.jpg");
+  background-repeat: no-repeat;
+  background-size: 480px 320px;
+}
+#hardik{
+  font-family: mosk;
+  font-weight: 800;
+}
+
+ #indicator-row{
+  font-family: 'mosk';
+  font-weight: 700;
 }
 h1,
 p {
@@ -37,7 +73,7 @@ p.note {
   display: block;
   margin: 0px auto;
   width: 465px;
-  padding: 12px;
+  
   border: 1px solid #cdcdcd;
   background: #e3e3e3;
   overflow: hidden;
@@ -50,7 +86,7 @@ p.note {
   -ms-border-radius: 3px;
   display: block;
   width: 100%;
-  padding: 3px 0px 1px !important;
+  padding-top: 5px;
   background: #32342f;
   overflow: hidden;
 }

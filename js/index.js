@@ -9,7 +9,7 @@
     window.digit_five = $('div.digit-five');
     window.digit_six = $('div.digit-six');
     window.digit_seven = $('div.digit-seven');
-    window.digit_seven = $('div.digit-seven');
+    window.digit_eight = $('div.digit-eight');
 
     return window.timer_int = self.setInterval((function() {
       return decrementDigit(window.digit_four);

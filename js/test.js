@@ -34,7 +34,7 @@ for(c=0; c<brickColumnCount; c++) {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-document.addEventListener("mousemove", mouseMoveHandler, false);
+canvas.addEventListener("mousemove", mouseMoveHandler, false);
 
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
@@ -53,9 +53,10 @@ function keyUpHandler(e) {
     }
 }
 function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
+    console.log(e);
+    var relativeX = e.clientX-canvas.offsetWidth;
     if(relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
+    paddleX = relativeX-paddleWidth/2;
     }
 }
 function collisionDetection() {
@@ -92,11 +93,11 @@ function drawPaddle() {
     ctx.closePath();
 }
 /*function drawTextOnBrick(brick){
-    var brickx = brick.getContext("2d");
-    var EventName = getEvent();
-    brickx.font = "16px Arial";
-        brickx.fillStyle = #000;
-        brickx.fillText(EventName, 8, 20);
+	var brickx = brick.getContext("2d");
+	var EventName = getEvent();
+	brickx.font = "16px Arial";
+    	brickx.fillStyle = #000;
+    	brickx.fillText(EventName, 8, 20);
 }*/
 var M = [[0,1,2,3,4],[5,6,7,8,9],[10,11,12,13,14]];
 function drawBricks() {
@@ -112,9 +113,9 @@ function drawBricks() {
                 ctx.fillStyle = eventColor[(M[c][r]%4)];
                 ctx.fill();
                 ctx.closePath();
-        ctx.font = "900 10px Arial";
-            ctx.fillStyle = textColor;
-            ctx.fillText(eventName[M[c][r]], brickX+(brickWidth/6), brickY+(brickHeight/1.5));
+	 	ctx.font = "900 10px Arial";
+    		ctx.fillStyle = textColor;
+    		ctx.fillText(eventName[M[c][r]], brickX+(brickWidth/6), brickY+(brickHeight/1.5));
 
             }
         }
