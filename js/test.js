@@ -22,7 +22,7 @@ var lives = 3;
 var brick_color = "#AAA";
 var eventName = ["Football","BasketBall ","Volley Ball","Cricket","Badminton","Lawn Tennis","Carrom",
     "Atheletics","Throw Ball","Squash","Table Tennis","Informals","Box Cricket","Pickle Ball","Harambe"];
-var eventColor= ["#3498db","#9b59b6","#c0392b","#f1c40f","#bdc3c7","#2c3e50","#f1c40f","#2c3e50"];
+var eventColor= ["#2980b9","#3498db","#f39c12","#f1c40f"];
 var textColor = "#FFF"
 var bricks = [];
 for(c=0; c<brickColumnCount; c++) {
@@ -92,11 +92,11 @@ function drawPaddle() {
     ctx.closePath();
 }
 /*function drawTextOnBrick(brick){
-	var brickx = brick.getContext("2d");
-	var EventName = getEvent();
-	brickx.font = "16px Arial";
-    	brickx.fillStyle = #000;
-    	brickx.fillText(EventName, 8, 20);
+    var brickx = brick.getContext("2d");
+    var EventName = getEvent();
+    brickx.font = "16px Arial";
+        brickx.fillStyle = #000;
+        brickx.fillText(EventName, 8, 20);
 }*/
 var M = [[0,1,2,3,4],[5,6,7,8,9],[10,11,12,13,14]];
 function drawBricks() {
@@ -109,12 +109,12 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = eventColor[(M[c][r]%8)];
+                ctx.fillStyle = eventColor[(M[c][r]%4)];
                 ctx.fill();
                 ctx.closePath();
-	 	ctx.font = "900 10px Arial";
-    		ctx.fillStyle = textColor;
-    		ctx.fillText(eventName[M[c][r]], brickX+(brickWidth/6), brickY+(brickHeight/1.5));
+        ctx.font = "900 10px Arial";
+            ctx.fillStyle = textColor;
+            ctx.fillText(eventName[M[c][r]], brickX+(brickWidth/6), brickY+(brickHeight/1.5));
 
             }
         }
