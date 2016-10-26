@@ -34,8 +34,8 @@ for(c=0; c<brickColumnCount; c++) {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-canvas.addEventListener("mousemove", mouseMoveHandler, false);
-
+//canvas.addEventListener("mousemove", mouseMoveHandler, false);
+canvas.addEventListener("click",mouseClickHandler,false);
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = true;
@@ -59,6 +59,15 @@ function mouseMoveHandler(e) {
     paddleX = relativeX-paddleWidth/2;
     }
 }
+function mouseClickHandler(e){
+    console.log(e);
+    //alert("Hello WOrld!");
+    var relativeX = e.clientX-canvas.offsetWidth;
+    if(relativeX>0 && relativeX < canvas.width){
+        paddleX = relativeX-paddleWidth/2;
+        }
+    }
+
 function collisionDetection() {
     for(c=0; c<brickColumnCount; c++) {
         for(r=0; r<brickRowCount; r++) {
