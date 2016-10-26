@@ -59,12 +59,10 @@
 
 
   /* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-}
+
 @media only screen and (min-width: 600px) {
     /* For tablets: */
-    .col-m-1 {width: 8.33%;}
+    /*.col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
     .col-m-3 {width: 25%;}
     .col-m-4 {width: 33.33%;}
@@ -75,11 +73,16 @@
     .col-m-9 {width: 75%;}
     .col-m-10 {width: 83.33%;}
     .col-m-11 {width: 91.66%;}
-    .col-m-12 {width: 100%;}
+    .col-m-12 {width: 100%;}*/
+    .comingsoon{
+    	font-size: 30px;
+    	text-align: right;
+    }
 }
 @media only screen and (min-width: 768px) {
+
     /* For desktop: */
-    .col-1 {width: 8.33%;}
+    /*.col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
     .col-4 {width: 33.33%;}
@@ -90,7 +93,7 @@
     .col-9 {width: 75%;}
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+    .col-12 {width: 100%;}*/
 }
 
 </style>
@@ -105,22 +108,22 @@
   
       
       <div class="row">
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
           
         </div>
-        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding-left: 5px;">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" style="padding-left: 5px;">
 
             <canvas id="myCanvas" width="480" height="320" style="border:1px solid #000000;"></canvas>
       
         </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
           
         </div>    
     </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
           
         </div>
-        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
           <div class="timer-contain">
   <div id="timer">
     <div class="digit">
@@ -634,11 +637,12 @@
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
           
-        </div>      
+        </div> 
+        </div>     
         <div class="container">
         	<div class="row">
         		<div class="col-xs-12 col-sm-4 col-lg-4 col-md-4"></div>
-        		<div class="col-xs-12 col-sm-4 col-lg-4 col-md-4 comingsoon">Coming Soon</div>
+        		<div class="col-xs-12 col-sm-4 col-lg-4 col-md-4 comingsoon"><h1>Coming Soon</h1></div>
         		<div class="col-xs-12 col-sm-4 col-lg-4 col-md-4"></div>
         	</div>
         </div>
@@ -649,7 +653,7 @@
         
           
 
- <script type="text/javascript" src="js/test.js"></script> 
+ <script type="text/javascript" src="js/test.j"></script> 
     <script type="text/javascript" src="js/countdown.js"></script>  
 </body>
 </html>
