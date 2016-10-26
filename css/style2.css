@@ -29,6 +29,7 @@ body {
 
 
 .comingsoon{
+  display: block;
   font-family: 'mosk';
   font-weight: 800;
   font-size: 50px;
