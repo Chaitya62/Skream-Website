@@ -19,6 +19,7 @@ var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var score = 0;
 var lives = 3;
+var offsetWidth = canvas.getBoundingClientRect();
 var brick_color = "#AAA";
 var eventName = ["Football","BasketBall ","Volley Ball","Cricket","Badminton","Lawn Tennis","Carrom",
     "Atheletics","Throw Ball","Squash","Table Tennis","Informals","Box Cricket","Pickle Ball","Harambe"];
@@ -61,12 +62,12 @@ function mouseMoveHandler(e) {
 }
 function mouseClickHandler(e){
     console.log(e);
-    //alert("Hello WOrld!");
-    var relativeX = e.clientX-canvas.offsetWidth;
-    if(relativeX>0 && relativeX < canvas.width){
-        paddleX = relativeX-paddleWidth/2;
-        }
+     var relativeX = e.clientX-offsetWidth.left;
+    if(relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX-paddleWidth/2;
     }
+}
+    
 
 function collisionDetection() {
     for(c=0; c<brickColumnCount; c++) {
