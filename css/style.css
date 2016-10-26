@@ -1,18 +1,36 @@
 @font-face {
     font-family: 'mosk';
     src: url("../font/MB700.ttf");
-    src: url("../font/MUB900.ttf");
+    src: url("../font/MB900.ttf");
+    src: url("../font/MBB800.ttf");
+    src: url("../font/MSB600.ttf");
+    src: url("../font/MM500.ttf");
+    src: url("../font/MN400.ttf");
+    src: url("../font/ML300.ttf");
+    src: url("../font/ML200.ttf");
+    src: url("../font/MT100.ttf");
 }
 
 body {
   background-image: url("http://www.freedigitalphotos.net/images/img/homepage/87357.jpg");
   background-repeat: no-repeat;
-  -webkit-background-size: 100%;
-  background-size: 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
   -webkit-background-size: cover;
   background-size: cover;
+}
+
+#wordplay{
+    word-spacing: 40px;
+    font-family: 'mosk';
+    font-weight: bold;
+  }
 
 
+.comingsoon{
+  font-family: 'mosk';
+  font-weight: 800;
+  font-size: 50px;
 }
 html {
   font-family: 'mosk'; !important;
@@ -28,14 +46,10 @@ html {
   background-repeat: no-repeat;
   background-size: 480px 320px;
 }
-#hardik{
-  font-family: mosk;
-  font-weight: 800;
-}
 
  #indicator-row{
   font-family: 'mosk';
-  font-weight: 700;
+  font-weight: 900;
 }
 h1,
 p {
@@ -73,7 +87,8 @@ p.note {
   display: block;
   margin: 0px auto;
   width: 465px;
-  
+  height: 82px;
+  margin-bottom: 3%;
   border: 1px solid #cdcdcd;
   background: #e3e3e3;
   overflow: hidden;
