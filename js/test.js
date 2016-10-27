@@ -78,7 +78,7 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
-                        console.log("YOU WIN, CONGRATS!");
+                        alert("YOU WIN, CONGRATS!");
                         document.location.reload();
                     
 }                }
@@ -131,7 +131,7 @@ function drawBricks() {
     }
 }
 function drawScore() {
-    ctx.font = "16px Arial";
+    ctx.font = "16px mosk";
     ctx.fillStyle = brick_color;
     ctx.fillText("Score: "+score, 8, 20);
 }
@@ -163,7 +163,7 @@ function draw() {
         else {
             lives--;
             if(!lives) {
-                console.log("GAME OVER");
+                alert("GAME OVER");
                 document.location.reload();
             }
             else {
