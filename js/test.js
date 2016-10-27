@@ -35,7 +35,7 @@ for(c=0; c<brickColumnCount; c++) {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-//canvas.addEventListener("mousemove", mouseMoveHandler, false);
+canvas.addEventListener("mousemove", mouseMoveHandler, false);
 canvas.addEventListener("click",mouseClickHandler,false);
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
@@ -54,14 +54,13 @@ function keyUpHandler(e) {
     }
 }
 function mouseMoveHandler(e) {
-    console.log(e);
-    var relativeX = e.clientX-canvas.offsetWidth;
+
+      var relativeX = e.clientX-offsetWidth.left;
     if(relativeX > 0 && relativeX < canvas.width) {
     paddleX = relativeX-paddleWidth/2;
     }
 }
 function mouseClickHandler(e){
-    console.log(e);
      var relativeX = e.clientX-offsetWidth.left;
     if(relativeX > 0 && relativeX < canvas.width) {
     paddleX = relativeX-paddleWidth/2;
@@ -81,8 +80,8 @@ function collisionDetection() {
                     if(score == brickRowCount*brickColumnCount) {
                         console.log("YOU WIN, CONGRATS!");
                         document.location.reload();
-                    }
-                }
+                    
+}                }
             }
         }
     }
@@ -91,14 +90,14 @@ function collisionDetection() {
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = brick_color;
+    ctx.fillStyle = "#000";
     ctx.fill();
     ctx.closePath();
 }
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = brick_color;
+    ctx.fillStyle = "#000";
     ctx.fill();
     ctx.closePath();
 }
