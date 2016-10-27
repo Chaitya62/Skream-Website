@@ -24,7 +24,7 @@ var brick_color = "#AAA";
 var eventName = ["Football","BasketBall ","Volley Ball","Cricket","Badminton","Lawn Tennis","Carrom",
     "Atheletics","Throw Ball","Squash","Table Tennis","Informals","Box Cricket","Pickle Ball","Harambe"];
 var eventColor= ["#2980b9","#3498db","#f39c12","#f1c40f"];
-var textColor = "#FFF"
+var textColor = "#000"
 var bricks = [];
 for(c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
@@ -122,7 +122,7 @@ function drawBricks() {
                 ctx.fillStyle = eventColor[(M[c][r]%4)];
                 ctx.fill();
                 ctx.closePath();
-	 	ctx.font = "900 10px Arial";
+	 	ctx.font = "100 12px mosk";
     		ctx.fillStyle = textColor;
     		ctx.fillText(eventName[M[c][r]], brickX+(brickWidth/6), brickY+(brickHeight/1.5));
 
@@ -136,7 +136,7 @@ function drawScore() {
     ctx.fillText("Score: "+score, 8, 20);
 }
 function drawLives() {
-    ctx.font = "16px Arial";
+    ctx.font = "16px mosk";
     ctx.fillStyle = brick_color;
     ctx.fillText("Lives: "+lives, canvas.width-65, 20);
 }
