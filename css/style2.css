@@ -1,7 +1,8 @@
 @font-face {
     font-family: 'mosk';
+    
     src: url("../assets/font/MB700.ttf");
-    src: url("../assets/font/MB900.ttf");
+    
     src: url("../assets/font/MBB800.ttf");
     src: url("../assets/font/MSB600.ttf");
     src: url("../assets/font/MM500.ttf");
@@ -10,11 +11,15 @@
     src: url("../assets/font/ML200.ttf");
     src: url("../assets/font/MT100.ttf");
 }
+@font-face
+{
+  font-family: 'moskbold';
+  src: url("../assets/font/MB900.ttf");
+}
 
 body {
   background-color: #0FF;
-  background-image: url("http://www.freedigitalphotos.net/images/img/homepage/87357.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../assets/images/bg.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   -webkit-background-size: cover;
@@ -30,9 +35,9 @@ body {
 
 
 .comingsoon {
-  color: white;
+  color: #384b82;
   margin: 0;
-  position:fixed;
+  position:relative;
   left: 0;
   right: 0;
   display: block;
@@ -46,11 +51,12 @@ html {
   font-family: 'mosk'; !important;
 }
 #myCanvas{
-  background-image: url("http://www.freedigitalphotos.net/images/img/homepage/87357.jpg");
+  background-image: url("../assets/images/game.png");
   background-repeat: no-repeat;
   background-size: 480px 320px;
   width: auto;
-  min-width: 320px;
+  min-width: 480px;
+  min-height: 320px;
 }
 
  #indicator-row{
@@ -60,15 +66,15 @@ html {
 }
 h1,
 p {
-  display: block;
-  font-family: Arial;
-  text-align: center;
+      margin: 2px auto;
+    color: orange;
+    font-size: 5em;
+    width: 100%;
+    font-family: 'moskbold';
+    font-weight: 900;
+    text-align: center;
 }
-h1 {
-  margin: 20px 0 0;
-  color: white;
-  font-size: 2em;
-}
+
 p {
   margin: 5px 0 20px;
   color: #999;
@@ -3880,3 +3886,23 @@ p.note {
   width: 5px;
   background-color: #feaf00;
 }
+
+}
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+    h1{
+    font-size: 33px;
+    left: 74px;
+    position: relative
+    }
+}
+
+/*@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    /*.container{
+      margin-top: 3%;
+      overflow: hidden;
+      position: relative;
+      z-index: 10000;
+    }
+  }*/
